@@ -1,19 +1,12 @@
 import { useState } from "react"
 
-export default function CreateTodo() {
-
+export default function CreateTodo({addTodo}) {
   const [todo,setTodo] = useState("")
-
-  const addTodo = ()=>{
-    alert("add todo called",todo)
-
-  }
-
   return (
     <div>
-      <div className="d-flex ">
-        <input type="text" value="" onChange={setTodo(todo)} className="form-control" placeholder="Enter Something"/>
-        <button type="button" onClick={addTodo} className="btn btn-success">Add</button>
+      <div className="d-flex">
+        <input type="text" onChange={(e)=>setTodo(e.target.value)} className="form-control" placeholder="Enter Something"/>
+        <button type="button" onClick={()=>addTodo(todo)} className="btn btn-success">Add</button>
       </div>
     </div>
   )

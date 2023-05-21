@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-function ListTodo() {
-
-  const [todos,setTodos] = useState([])
+function ListTodo({todos}) {
 
   const deleteTodo = ()=>{
     alert('delete todo called')
