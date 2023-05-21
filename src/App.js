@@ -8,11 +8,15 @@ export default function App() {
     setTodos([...todos,todo]);
     console.log(todos)
   }
+  const deleteTodo = (key)=>{
+    // alert('delete todo called'+key)
+    
+  }
   return (
     <div className='p-5'>
         <h1 className='text-center'>React Todo App</h1>
         <CreateTodo addTodo={addTodo}/>
-        <ListTodo todos={todos}/>
+        <ListTodo todos={todos} deleteTodo={deleteTodo}/>
     </div>
   );
 }
