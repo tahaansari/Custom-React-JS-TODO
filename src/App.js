@@ -6,11 +6,12 @@ export default function App() {
   const [todos,setTodos] = useState([])
   const addTodo = (todo) => {
     setTodos([...todos,todo]);
-    console.log(todos)
   }
   const deleteTodo = (key)=>{
-    // alert('delete todo called'+key)
-    
+    const newTodos = todos.filter((todo,index)=>{
+        return index != key;
+    })
+    setTodos(newTodos);
   }
   return (
     <div className='p-5'>

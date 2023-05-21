@@ -6,7 +6,7 @@ export default function CreateTodo({addTodo}) {
     <div>
       <div className="d-flex">
         <input type="text" value={todo} onChange={(e)=>setTodo(e.target.value)} className="form-control" placeholder="Enter Something"/>
-        <button type="button" onClick={()=>{ setTodo(""); addTodo(todo)}} className="btn btn-success">Add</button>
+        <button type="button" onClick={ ()=>{if(todo){addTodo(todo);setTodo("")}} } className="btn btn-success">Add</button>
       </div>
     </div>
   )
