@@ -1,11 +1,4 @@
-import { useState } from "react";
-
-function ListTodo({todos}) {
-
-  const deleteTodo = ()=>{
-    alert('delete todo called')
-  }
-
+export default function ListTodo({todos,deleteTodo}) {
   return (
     <div>
       <ul className="list-group">
@@ -13,7 +6,7 @@ function ListTodo({todos}) {
           return(
             <li key={index} className="list-group-item">
               {todo}
-              <button type="button" onClick={deleteTodo} className="btn-close float-end" aria-label="Close"></button>
+              <button type="button" onClick={()=>deleteTodo(index)} className="btn-close float-end" aria-label="Close"></button>
             </li>
           )
         })}
@@ -21,5 +14,3 @@ function ListTodo({todos}) {
     </div>
   )
 }
-
-export default ListTodo;
