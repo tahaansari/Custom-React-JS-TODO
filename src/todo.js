@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import CreateTodo from './components/todo/createTodo';
-import ListTodo from './components/ListTodo';
+import CreateTodo from './components/createTodo';
+import ListTodo from './components/listTodo';
 
 export default function App() {
   const [todos,setTodos] = useState([])
