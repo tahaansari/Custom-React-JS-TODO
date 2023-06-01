@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import CreateTodo from './components/CreateTodo';
+import CreateTodo from './components/todo/createTodo';
 import ListTodo from './components/ListTodo';
 
 export default function App() {
